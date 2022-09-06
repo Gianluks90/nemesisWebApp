@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Captain",
+        "images": "./assets/images/capitano.jpg",
+        "color": "blue"
+    },
+    {
+        "name": "Scout",
+        "images": "./assets/images/esploratrice.jpg",
+        "color": "violet"
+    },    
+    {
+        "name": "Mechanic",
+        "images": "./assets/images/meccanico.jpg",
+        "color": "orange"
+    },    
+    {
+        "name": "Medic",
+        "images": "./assets/images/medico.jpg",
+        "color": "pink"
+    },    
+    {
+        "name": "Pilot",
+        "images": "./assets/images/pilota.jpg",
+        "color": "green"
+    },    
+    {
+        "name": "Scientist",
+        "images": "./assets/images/scienziato.jpg",
+        "color": "white"
+    },    
+    {
+        "name": "Soldier",
+        "images": "./assets/images/soldato.jpg",
+        "color": "red"
+    }
+]
