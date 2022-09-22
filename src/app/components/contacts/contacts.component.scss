@@ -81,12 +81,12 @@
 //     .first-posters{
 //         margin-top: 30px;
 //     }
-    
+
 //     .second-posters{
 //         height: 100px;
 //         text-align: center;
 //     }
-    
+
 //     .third-posters{
 //         height: 100px;
 //         text-align: center;
@@ -96,32 +96,32 @@
 //         height: 120px;
 //         text-align: center;
 //     }
-    
+
 //     .discord{
 //         height: 90px;
 //         margin-right: 50px;
 //     }
-    
+
 //     .github{
 //         height: 90px;
 //         margin-left: 0px;
 //         margin-right: 80px;
 //         margin-top: 65px;
 //     }
-    
+
 //     .twitch{
 //         height: 90px;
 //         margin-left: 170px;
 //         margin-top: 30px;
 //     }
-    
+
 //     .youtube{
 //         height: 90px;
 //         margin-left: 0px;
 //         margin-top: 0px;
 //         margin-right: 170px;
 //     }
-    
+
 //     .mail{
 //         height: 90px;
 //         margin-left: 40px;
@@ -137,7 +137,7 @@
 .contacts-container{
     width: 100%;
     min-height: 100vh;
-    background-image: url("src/assets/images/wall.png");
+    // background-image: url("src/assets/images/wall.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -165,7 +165,7 @@
     // height: 85%;
     margin-left: auto;
     margin-right: auto;
-    background-image: url("src/assets/images/bachecatagliata.png");
+    // background-image: url("src/assets/images/bachecatagliata.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -254,7 +254,7 @@
         justify-content: space-evenly;
         position: relative;
     }
-    
+
     .second-posters{
         width: 45%;
         height: 25%;
@@ -276,35 +276,35 @@
         align-items: center;
         position: relative;
     }
-       
+
     .discord{
         height: 16vh;
         position: absolute;
         top: 45%;
         left: 10%;
     }
-    
+
     .github{
         height: 16vh;
         position: absolute;
         top: 70%;
         left: 45%;
     }
-    
+
     .twitch{
         height: 16vh;
         position: absolute;
         top: 55%;
         right: 10%;
     }
-    
+
     .youtube{
         height: 16vh;
         position: absolute;
         top: 20%;
         left: 20%
     }
-    
+
     .mail{
         height: 16vh;
         position: absolute;
@@ -317,7 +317,7 @@
 @media screen and (max-width: 599px) {
 
     .contacts-container{
-        background-image: url("src/assets/images/phone_bacheca.jpg");
+        // background-image: url("src/assets/images/phone_bacheca.jpg");
     }
 
     .mama-hawk-icon{
@@ -330,13 +330,13 @@
         width: 75%;
         position: relative;
     }
-    
+
     .second-posters{
         height: 125px;
         width: 75%;
         position: relative;
     }
-    
+
     .third-posters{
         height: 125px;
         width: 75%;
@@ -350,35 +350,35 @@
         margin-right: auto;
         position: relative;
     }
-    
+
     .discord{
         height: 13vh;
         position: absolute;
         top: 35%;
         left: 5%;
     }
-    
+
     .github{
         height: 13vh;
         position: absolute;
         top: 57%;
         left: 48%;
     }
-    
+
     .twitch{
         height: 13vh;
         position: absolute;
         top: 65%;
         left: 45%;
     }
-    
+
     .youtube{
         height: 13vh;
         position: absolute;
         top: 55%;
         left: 10%;
     }
-    
+
     .mail{
         height: 13vh;
         position: absolute;

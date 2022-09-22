@@ -26,7 +26,7 @@ export class CharacterListComponent implements OnInit {
   public filters: any;
   public searchString: string;
   public isCompact: boolean;
-  public isLight: boolean;
+  // public isLight: boolean;
   public isFilterClosed: boolean;
   public bannerCharacters: any[];
   public editClicked: boolean;
@@ -39,7 +39,7 @@ export class CharacterListComponent implements OnInit {
     this.filters = {};
     this.searchString = '';
     this.isCompact = localStorage.getItem('isCompact') === 'true'? true : false;
-    this.isLight = localStorage.getItem('isLight') === 'true'? true : false;
+    // this.isLight = localStorage.getItem('isLight') === 'true'? true : false;
     this.isFilterClosed = false;
     this.editClicked = false;
     this.bannerCharacters = [];
@@ -47,7 +47,7 @@ export class CharacterListComponent implements OnInit {
 
   ngOnInit(): void {
     this.initCharacterList();
-  } 
+  }
 
   initCharacterList(){
     this.characterservice.getCharacter().subscribe(c => {
@@ -84,15 +84,15 @@ export class CharacterListComponent implements OnInit {
     }
   }
 
-  changeView(){
-    this.isCompact = !this.isCompact;
-    localStorage.setItem('isCompact', this.isCompact + '');
-  }
+  // changeView(){
+  //   this.isCompact = !this.isCompact;
+  //   localStorage.setItem('isCompact', this.isCompact + '');
+  // }
 
-  changeTheme(){
-    this.isLight = !this.isLight;
-    localStorage.setItem('isLight', this.isLight + '');
-  }
+  // changeTheme(){
+  //   this.isLight = !this.isLight;
+  //   localStorage.setItem('isLight', this.isLight + '');
+  // }
 
 
   toTopPage(){

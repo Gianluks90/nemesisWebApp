@@ -1,37 +1,110 @@
 [
-    {
-        "name": "Captain",
-        "images": "./assets/images/capitano.jpg",
-        "color": "blue"
-    },
-    {
-        "name": "Scout",
-        "images": "./assets/images/esploratrice.jpg",
-        "color": "violet"
-    },    
-    {
-        "name": "Mechanic",
-        "images": "./assets/images/meccanico.jpg",
-        "color": "orange"
-    },    
-    {
-        "name": "Medic",
-        "images": "./assets/images/medico.jpg",
-        "color": "pink"
-    },    
-    {
-        "name": "Pilot",
-        "images": "./assets/images/pilota.jpg",
-        "color": "green"
-    },    
-    {
-        "name": "Scientist",
-        "images": "./assets/images/scienziato.jpg",
-        "color": "white"
-    },    
-    {
-        "name": "Soldier",
-        "images": "./assets/images/soldato.jpg",
-        "color": "red"
-    }
+  {
+    "name": "Captain",
+    "nameITA": "Capitano",
+    "images": "./assets/images/capitano.png",
+    "color": "blue",
+    "trait" : "",
+    "ammo": 6,
+    "expansion": "base"
+  },
+  {
+    "name": "Scout",
+    "nameITA": "Esploratore",
+    "images": "./assets/images/esploratore.png",
+    "color": "violet",
+    "trait" : "",
+    "ammo": 4,
+    "expansion": "base"
+  },
+  {
+    "name": "Mechanic",
+    "nameITA": "Meccanico",
+    "images": "./assets/images/meccanico.png",
+    "color": "orange",
+    "trait" : "",
+    "ammo": 3,
+    "expansion": "base"
+  },
+  {
+    "name": "Pilot",
+    "nameITA": "Pilota",
+    "images": "./assets/images/pilota.png",
+    "color": "green",
+    "trait" : "",
+    "ammo": 2,
+    "expansion": "base"
+  },
+  {
+    "name": "Scientist",
+    "nameITA": "Scienziato",
+    "images": "./assets/images/scienziato.png",
+    "color": "white",
+    "trait" : "",
+    "ammo": 2,
+    "expansion": "base"
+  },
+  {
+    "name": "Soldier",
+    "nameITA": "Soldato",
+    "images": "./assets/images/soldato.png",
+    "color": "red",
+    "trait" : "",
+    "ammo": 5,
+    "expansion": "base"
+  },
+  {
+    "name": "Medic",
+    "nameITA": "Medico",
+    "images": "./assets/images/medico.png",
+    "color": "pink",
+    "trait" : "",
+    "ammo": 2,
+    "expansion": "medic"
+  },
+  {
+    "name": "Bounty Hunter",
+    "nameITA": "Cacciatore di taglie",
+    "images": "./assets/images/bounty_hunter.png",
+    "color": "violet",
+    "trait" : "",
+    "ammo": 0,
+    "expansion": "aftermath"
+  },
+  {
+    "name": "CEO",
+    "nameITA": "CEO",
+    "images": "./assets/images/ceo.png",
+    "color": "blue",
+    "trait" : "",
+    "ammo": 0,
+    "expansion": "aftermath"
+  },
+  {
+    "name": "Convict",
+    "nameITA": "Detenuto",
+    "images": "./assets/images/detenuto.png",
+    "color": "red",
+    "trait" : "",
+    "ammo": 0,
+    "expansion": "aftermath"
+  },
+  {
+    "name": "Psychologist",
+    "nameITA": "Psicologo",
+    "images": "./assets/images/psicologa.png",
+    "color": "white",
+    "trait" : "",
+    "ammo": 0,
+    "expansion": "aftermath"
+  },
+  {
+    "name": "Android",
+    "nameITA": "Androide",
+    "images": "./assets/images/androide.png",
+    "color": "green",
+    "trait" : "",
+    "ammo": 0,
+    "expansion": "aftermath"
+  }
 ]
