@@ -10,11 +10,15 @@
     min-height: 100vh;
   }
 
-.home-icon{
+.home-button{
     background-color: transparent;
     border-color: transparent;
     cursor: pointer;
-    padding: 8px;
+    padding: 16px;
+}
+
+.home-icon{
+  height: 60px;
 }
 
 .to-top-button{
@@ -71,14 +75,22 @@
 }
 
 @media screen and (max-width: 599px) {
-    .character-image{
-        width: 60px;
+    // .character-image{
+    //     width: 60px;
+    // }
+
+    .list{
+      width: 32%;
+    }
+
+    .random-image{
+      width: 40% !important;
     }
 
     .single-character{
         display: flex;
         flex-direction: column;
-        width: 60px;
+        // width: 60px;
         margin: 8px
     }
 
@@ -576,16 +588,25 @@ input:checked + .slider:before {
 
 
 .squad-button{
-  background-color: #252525;
-  color: white;
+  // background-color: #252525;
+  // color: white;
   height: 40px;
-  border-style: none;
-  border-radius: 10px;
+  // border-style: none;
+  // border-radius: 10px;
   max-width: 200px;
-  cursor: pointer;
-  box-shadow: 0 5px 15px #404040, 0 4px 12px #404040;
+  // cursor: pointer;
+  // box-shadow: 0 5px 15px #404040, 0 4px 12px #404040;
 }
 
 .squad-button:hover{
   box-shadow: 0 5px 15px #606060, 0 4px 12px #606060;
+}
+
+.random-image{
+  width: 25%;
+  cursor: pointer;
+}
+
+.random-image:hover{
+  transform: scale(1.03)
 }

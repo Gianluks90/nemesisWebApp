@@ -1,23 +1,17 @@
 <div class="characters-container-total">
 
     <div>
-        <button type="button" class="home-icon">
-          <img [routerLink]="['/home']" src="./assets/images/home.svg">
+        <button type="button" class="home-button">
+          <img class="home-icon" [routerLink]="['/home']" src="./assets/images/home.png">
         </button>
     </div>
 
     <div class="filter-section">
-        <!-- <div class="filter-title">
-            Expansions
-            <img class="filter-icon" *ngIf="isFilterClosed" (click)="openCloseFilter()" src="./assets/images/arrow-down-white.svg">
-            <img class="filter-icon" *ngIf="!isFilterClosed" (click)="openCloseFilter()" src="./assets/images/arrow-up-white.svg">
-        </div> -->
 
         <div *ngIf="!(isHandset | async) && !isFilterClosed" class="filter-container">
 
-            <div>
-              <button class="squad-button">Random Squad</button>
-            </div>
+
+            <img class="random-image" src="./assets/images/random.png">
 
             <div class="filter-expansions">
               <div class="single-section-filter">
@@ -39,51 +33,37 @@
               </div>
             </div>
 
-            <div>
-              <button class="squad-button">Choose Squad</button>
-            </div>
+            <img class="random-image" src="./assets/images/manual.png">
 
         </div>
 
-        <div *ngIf="(isHandset | async) && !isFilterClosed" class="filter-section">
+        <div *ngIf="(isHandset | async) && !isFilterClosed" class="filter-container">
 
-            <div class="filter-race">
-                <div class="single-section-filter">
-                    <div class="icon-title">Race</div>
-                    <div>
-                        <div class="left">
-                            <label class="container">
-                                <input type="checkbox" (click)="filterBy('human', 'race')">
-                                <span class="race-name">Human</span>
-                            </label>
-                            <label class="container">
-                                <input type="checkbox" (click)="filterBy('demon', 'race')">
-                                <span class="race-name">Demon</span>
-                            </label>
-                            <label class="container">
-                                <input type="checkbox" (click)="filterBy('fairy', 'race')">
-                                <span class="race-name">Fairy</span>
-                            </label>
-                        </div>
-                        <div class="right">
-                            <label class="container">
-                                <input type="checkbox" (click)="filterBy('giant', 'race')">
-                                <span class="race-name">Giant</span>
-                            </label>
-                            <label class="container">
-                                <input type="checkbox" (click)="filterBy('goddess', 'race')">
-                                <span class="race-name">Goddes</span>
-                            </label>
-                            <label class="container">
-                                <input type="checkbox" (click)="filterBy('unknown', 'race')">
-                                <span class="race-name">Unknown</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
+          <div class="filter-expansions">
+            <div class="single-section-filter">
+              <div class="icon-title">Expansions</div>
+              <div class="row">
+                <label class="container">
+                  <input type="checkbox" (click)="filterBy('base', 'expansion')">
+                  <span class="race-name">Base Game</span>
+                </label>
+                <label class="container">
+                  <input type="checkbox" (click)="filterBy('aftermath', 'expansion')">
+                  <span class="race-name">Aftermath</span>
+                </label>
+                <label class="container">
+                  <input type="checkbox" (click)="filterBy('medic', 'expansion')">
+                  <span class="race-name">Medic Expansion</span>
+                </label>
+              </div>
             </div>
+          </div>
 
-        </div>
+          <img class="random-image" src="./assets/images/random.png">
+
+          <img class="random-image" src="./assets/images/manual.png">
+
+      </div>
 
     </div>
 

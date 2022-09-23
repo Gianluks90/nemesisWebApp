@@ -65,12 +65,17 @@
 
     .header-image{
         height: 45%;
-        width: 18%;
+        // width: 18%;
     }
 
     .header-image:hover{
         transform: scale(1.03);
     }
+
+    .characters-image{
+      height: 45%;
+    }
+
 }
 
 @media screen and (max-width: 599px) {
@@ -84,8 +89,12 @@
     }
 
     .header-image{
-        height: 30%;
-        width: 35%;
+        height: 25%;
+        // width: 35%;
+    }
+
+    .characters-image{
+      height: 18%;
     }
 
     .seven-disclaimer{

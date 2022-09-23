@@ -30,6 +30,7 @@ export class CharacterListComponent implements OnInit {
   public isFilterClosed: boolean;
   public bannerCharacters: any[];
   public editClicked: boolean;
+  public squad: any[];
 
   constructor(private characterservice: CharacterService, private breakpointObserver: BreakpointObserver) {
     this.filteredCharacters = [];
@@ -84,16 +85,19 @@ export class CharacterListComponent implements OnInit {
     }
   }
 
-  // changeView(){
-  //   this.isCompact = !this.isCompact;
-  //   localStorage.setItem('isCompact', this.isCompact + '');
-  // }
-
-  // changeTheme(){
-  //   this.isLight = !this.isLight;
-  //   localStorage.setItem('isLight', this.isLight + '');
-  // }
-
+  getMoreRandom(arr, n) {
+    const tempArray = [...arr];
+    this.squad = [];
+    while (this.squad.length !== n) {
+      const index = Math.floor(Math.random() * tempArray.length);
+      const selectedCharacter = tempArray[index];
+      if (this.squad.filter(c => c.color.includes(selectedCharacter.color[0])).length === 0) {
+        this.squad.push(tempArray[index]);
+        tempArray.splice(index, 1);
+      }
+    }
+    console.log('this.squad', this.squad)
+  }
 
   toTopPage(){
     window.scrollTo(0,0);
@@ -109,10 +113,6 @@ export class CharacterListComponent implements OnInit {
     } else {
       this.bannerCharacters.push(character);
     }
-  }
-
-  editBanner(){
-    this.editClicked = true;
   }
 
 }
