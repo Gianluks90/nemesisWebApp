@@ -290,6 +290,8 @@
 .container{
     display: flex;
     align-items: center;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 .icon-filter{
@@ -297,8 +299,8 @@
     margin-right: 4px;
 }
 
-.race-name{
-    margin-left: 4px;
+.expansion-name{
+    margin-left: 2px;
 }
 
 .row{
@@ -609,4 +611,10 @@ input:checked + .slider:before {
 
 .random-image:hover{
   transform: scale(1.03)
+}
+
+.app-team{
+    position: absolute;
+    top: 0;
+    left: 0;
 }

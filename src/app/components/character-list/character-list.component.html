@@ -10,8 +10,8 @@
 
         <div *ngIf="!(isHandset | async) && !isFilterClosed" class="filter-container">
 
-
-            <img class="random-image" src="./assets/images/random.png">
+            <img class="random-image" src="./assets/images/random.png" (click)="teamButtonsClicked('random', filteredCharacters)">
+            <!-- <img class="random-image" src="./assets/images/random.png" (click)="getMoreRandom(filteredCharacters, 5)"> -->
 
             <div class="filter-expansions">
               <div class="single-section-filter">
@@ -19,21 +19,21 @@
                 <div class="row">
                   <label class="container">
                     <input type="checkbox" (click)="filterBy('base', 'expansion')">
-                    <span class="race-name">Base Game</span>
+                    <span class="expansion-name">Base Game</span>
                   </label>
                   <label class="container">
                     <input type="checkbox" (click)="filterBy('aftermath', 'expansion')">
-                    <span class="race-name">Aftermath</span>
+                    <span class="expansion-name">Aftermath</span>
                   </label>
                   <label class="container">
                     <input type="checkbox" (click)="filterBy('medic', 'expansion')">
-                    <span class="race-name">Medic Expansion</span>
+                    <span class="expansion-name">Medic Expansion</span>
                   </label>
                 </div>
               </div>
             </div>
 
-            <img class="random-image" src="./assets/images/manual.png">
+            <img class="random-image" src="./assets/images/manual.png" (click)="teamButtonsClicked('manual', filteredCharacters)">
 
         </div>
 
@@ -45,70 +45,39 @@
               <div class="row">
                 <label class="container">
                   <input type="checkbox" (click)="filterBy('base', 'expansion')">
-                  <span class="race-name">Base Game</span>
+                  <span class="expansion-name">Base Game</span>
                 </label>
                 <label class="container">
                   <input type="checkbox" (click)="filterBy('aftermath', 'expansion')">
-                  <span class="race-name">Aftermath</span>
+                  <span class="expansion-name">Aftermath</span>
                 </label>
                 <label class="container">
                   <input type="checkbox" (click)="filterBy('medic', 'expansion')">
-                  <span class="race-name">Medic Expansion</span>
+                  <span class="expansion-name">Medic Expansion</span>
                 </label>
               </div>
             </div>
           </div>
 
-          <img class="random-image" src="./assets/images/random.png">
+          <img class="random-image" src="./assets/images/random.png" (click)="teamButtonsClicked('random', filteredCharacters)">
 
-          <img class="random-image" src="./assets/images/manual.png">
+          <img class="random-image" src="./assets/images/manual.png" (click)="teamButtonsClicked('manual', filteredCharacters)">
 
       </div>
 
     </div>
 
     <div class="characters-container">
-        <!-- <div class="compact-button-container">
-            <span>Compact Version</span>
-            <label class="switch">
-                <input type="checkbox" (click)="changeView()" [checked]="isCompact">
-                <span class="slider round"></span>
-            </label>
-        </div> -->
-        <div [ngClass]="bannerCharacters.length > 0 ? 'characters-list-banner':'characters-list'">
+        <div class="characters-list">
             <div class="list" *ngFor="let character of filteredCharacters">
                 <div class="single-character">
-                    <img class="character-image" title="{{character.name}}" src={{character.images}}>
+                    <img class="character-image" title="{{character.name}}" src={{character.images}} (click)="characterClicked(character)">
                     <!-- <span *ngIf="!isCompact" class="character-name">{{character.name}}</span> -->
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- <div *ngIf="bannerCharacters.length > 0 && !editClicked" class="banner-row">
-        <button class="edit-button" (click)="editBanner()">Edit</button>
-        <div class="banner-container" *ngFor="let character of bannerCharacters">
-            <div class="banner-character">
-                <img class="banner-image" src={{character.images}}>
-            </div>
-        </div>
-    </div>
-
-    <div *ngIf="editClicked" class="modal">
-        <div class="popup">
-            <div class="banner-container" *ngFor="let character of bannerCharacters">
-                <div class="banner-char">
-                    <img class="banner-char-image" src={{character.images}}>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <button type="button" class="to-top-button" (click)="toTopPage()">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
-            <path d="M0 0h24v24H0V0z" fill="none" />
-            <path
-                d="M13 19V7.83l4.88 4.88c.39.39 1.03.39 1.42 0 .39-.39.39-1.02 0-1.41l-6.59-6.59c-.39-.39-1.02-.39-1.41 0l-6.6 6.58c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L11 7.83V19c0 .55.45 1 1 1s1-.45 1-1z" />
-        </svg>
-    </button> -->
 </div>
+
+<app-team [teamInfo]="teamData" (closeEmitted)="isTeamVisible=false" class="app-team" *ngIf="isTeamVisible"></app-team>

@@ -5,17 +5,15 @@ import { AppComponent } from './components/app-component/app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CharacterListComponent } from './components/character-list/character-list.component';
-import { RandomizerComponent } from './components/randomizer/randomizer.component';
-import { ContactsComponent } from './components/contacts/contacts.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CharacterListComponent,
-    RandomizerComponent,
-    ContactsComponent
+    TeamComponent
   ],
   imports: [
     BrowserModule,

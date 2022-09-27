@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CharacterService } from 'src/services/character.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
@@ -28,9 +28,10 @@ export class CharacterListComponent implements OnInit {
   public isCompact: boolean;
   // public isLight: boolean;
   public isFilterClosed: boolean;
-  public bannerCharacters: any[];
   public editClicked: boolean;
   public squad: any[];
+  public isTeamVisible: boolean;
+  public teamData: any;
 
   constructor(private characterservice: CharacterService, private breakpointObserver: BreakpointObserver) {
     this.filteredCharacters = [];
@@ -43,7 +44,8 @@ export class CharacterListComponent implements OnInit {
     // this.isLight = localStorage.getItem('isLight') === 'true'? true : false;
     this.isFilterClosed = false;
     this.editClicked = false;
-    this.bannerCharacters = [];
+    this.isTeamVisible = false;
+    this.teamData = {};
    }
 
   ngOnInit(): void {
@@ -104,15 +106,13 @@ export class CharacterListComponent implements OnInit {
   }
 
   characterClicked(character: any){
-    if (this.bannerCharacters.length > 0) {
-      if (this.bannerCharacters.find(c => c.name === character.name)) {
-        this.bannerCharacters = this.bannerCharacters.filter(c => c.name !== character.name);
-      } else {
-        this.bannerCharacters.push(character);
-      }
-    } else {
-      this.bannerCharacters.push(character);
-    }
+    console.log('character clicked', character)
+  }
+
+  teamButtonsClicked(teamType: string, characters: any) {
+    this.isTeamVisible = true;
+    this.teamData.type = teamType;
+    this.teamData.characters = characters;
   }
 
 }

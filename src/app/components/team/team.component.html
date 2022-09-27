@@ -1,0 +1,65 @@
+<div class="full-container">
+    <div class="dialog-container">
+        <div class="header-dialog">
+            <button class="close-button" (click)="closeComponent()">X</button>
+        </div>
+        <div class="incipit">{{incipit}}</div>
+
+        <div class="random-section" *ngIf="random">
+            <div class="player-selection">
+                <div class="player-number" (click)="getMoreRandom(filteredCharacters, 1)">1</div>
+                <div class="player-number" (click)="getMoreRandom(filteredCharacters, 2)">2</div>
+                <div class="player-number" (click)="getMoreRandom(filteredCharacters, 3)">3</div>
+                <div class="player-number" (click)="getMoreRandom(filteredCharacters, 4)">4</div>
+                <div class="player-number" (click)="getMoreRandom(filteredCharacters, 5)">5</div>
+            </div>
+
+            <div class="characters-container">
+                <div class="characters-list">
+                    <div class="list" *ngFor="let character of squad">
+                        <div class="single-character">
+                            <img class="character-image" title="{{character.name}}" src={{character.images}}>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="manual-section" *ngIf="!random">
+            <div class="player-selection">
+                <div class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 1)">1</div>
+                <div class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 2)">2</div>
+                <div class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 3)">3</div>
+                <div class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 4)">4</div>
+                <div class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 5)">5</div>
+            </div>
+            <div class="incipit" *ngIf="manualNumberClicked && !manualSquadCompleted">Click on character to select</div>
+
+            <div class="characters-container" *ngIf="!manualSquadCompleted">
+                <div class="characters-list">
+                    <div class="list" *ngFor="let character of squadToChoice">
+                        <div class="single-character">
+                            <img class="character-image" title="{{character.name}}" src={{character.images}} (click)="characterSelected(character)">
+                            <span>{{character.name}}</span>
+                            <span>{{character.color}}</span>
+                            <span>{{character.ammo}}</span>
+                            <span>{{character.expansion}}</span>
+                            <span>{{character.trait}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="incipit" *ngIf="firstCharacterSelected && !manualSquadCompleted">Your team</div>
+            <div class="characters-container">
+                <div class="characters-list">
+                    <div class="list" *ngFor="let character of squad">
+                        <div class="single-character">
+                            <img class="character-image" title="{{character.name}}" src={{character.images}}>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
