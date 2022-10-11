@@ -3,27 +3,18 @@
     "name": "Captain",
     "nameITA": "Capitano",
     "images": "./assets/images/capitano.png",
-    "color": "blue",
+    "color": "darkblue",
     "trait" : "",
-    "ammo": 6,
+    "ammo": "■ ■ ■ ■ ■ ■",
     "expansion": "base"
   },
   {
     "name": "Scout",
     "nameITA": "Esploratore",
     "images": "./assets/images/esploratore.png",
-    "color": "violet",
+    "color": "purple",
     "trait" : "",
-    "ammo": 4,
-    "expansion": "base"
-  },
-  {
-    "name": "Mechanic",
-    "nameITA": "Meccanico",
-    "images": "./assets/images/meccanico.png",
-    "color": "orange",
-    "trait" : "",
-    "ammo": 3,
+    "ammo": "■ ■ ■ ■",
     "expansion": "base"
   },
   {
@@ -32,7 +23,7 @@
     "images": "./assets/images/pilota.png",
     "color": "green",
     "trait" : "",
-    "ammo": 2,
+    "ammo": "■ ■",
     "expansion": "base"
   },
   {
@@ -41,7 +32,7 @@
     "images": "./assets/images/scienziato.png",
     "color": "white",
     "trait" : "",
-    "ammo": 2,
+    "ammo": "■ ■",
     "expansion": "base"
   },
   {
@@ -50,52 +41,34 @@
     "images": "./assets/images/soldato.png",
     "color": "red",
     "trait" : "",
-    "ammo": 5,
+    "ammo": "■ ■ ■ ■ ■",
     "expansion": "base"
   },
   {
-    "name": "Medic",
-    "nameITA": "Medico",
-    "images": "./assets/images/medico.png",
-    "color": "pink",
+    "name": "Mechanic",
+    "nameITA": "Meccanico",
+    "images": "./assets/images/meccanico.png",
+    "color": "orange",
     "trait" : "",
-    "ammo": 2,
-    "expansion": "medic"
-  },
-  {
-    "name": "Bounty Hunter",
-    "nameITA": "Cacciatore di taglie",
-    "images": "./assets/images/bounty_hunter.png",
-    "color": "violet",
-    "trait" : "",
-    "ammo": 0,
-    "expansion": "aftermath"
+    "ammo": "■ ■ ■",
+    "expansion": "base"
   },
   {
     "name": "CEO",
     "nameITA": "CEO",
     "images": "./assets/images/ceo.png",
-    "color": "blue",
+    "color": "darkblue",
     "trait" : "",
-    "ammo": 0,
+    "ammo": "?",
     "expansion": "aftermath"
   },
   {
-    "name": "Convict",
-    "nameITA": "Detenuto",
-    "images": "./assets/images/detenuto.png",
-    "color": "red",
+    "name": "Bounty Hunter",
+    "nameITA": "Cacciatore di taglie",
+    "images": "./assets/images/bounty_hunter.png",
+    "color": "purple",
     "trait" : "",
-    "ammo": 0,
-    "expansion": "aftermath"
-  },
-  {
-    "name": "Psychologist",
-    "nameITA": "Psicologo",
-    "images": "./assets/images/psicologa.png",
-    "color": "white",
-    "trait" : "",
-    "ammo": 0,
+    "ammo": "?",
     "expansion": "aftermath"
   },
   {
@@ -104,7 +77,89 @@
     "images": "./assets/images/androide.png",
     "color": "green",
     "trait" : "",
-    "ammo": 0,
+    "ammo": "?",
     "expansion": "aftermath"
+  },
+  {
+    "name": "Psychologist",
+    "nameITA": "Psicologo",
+    "images": "./assets/images/psicologa.png",
+    "color": "white",
+    "trait" : "",
+    "ammo": "?",
+    "expansion": "aftermath"
+  },
+  {
+    "name": "Convict",
+    "nameITA": "Detenuto",
+    "images": "./assets/images/detenuto.png",
+    "color": "red",
+    "trait" : "",
+    "ammo": "?",
+    "expansion": "aftermath"
+  },
+  {
+    "name": "Medic",
+    "nameITA": "Medico",
+    "images": "./assets/images/medico.png",
+    "color": "violet",
+    "trait" : "",
+    "ammo": "■ ■",
+    "expansion": "medic"
+  },
+  
+  {
+    "name": "Guard",
+    "nameITA": "Sentinella",
+    "images": "./assets/images/Sentinella.png",
+    "color": "darkblue",
+    "trait" : "",
+    "ammo": "■ ■ ■ ■ ■",
+    "expansion": "lockdown"
+  },
+  {
+    "name": "Lab rat",
+    "nameITA": "Cavia",
+    "images": "./assets/images/Cavia.png",
+    "color": "purple",
+    "trait" : "",
+    "ammo": "0",
+    "expansion": "lockdown"
+  },
+  {
+    "name": "Hacker",
+    "nameITA": "Hacker",
+    "images": "./assets/images/Hacker.png",
+    "color": "green",
+    "trait" : "",
+    "ammo": "■ ■ ■",
+    "expansion": "lockdown"
+  },
+  {
+    "name": "Xenobiologist",
+    "nameITA": "Xenobiologo",
+    "images": "./assets/images/Xenobiologo.png",
+    "color": "white",
+    "trait" : "",
+    "ammo": "■ ■ ■",
+    "expansion": "lockdown"
+  },
+  {
+    "name": "Survivor",
+    "nameITA": "Sopravvissuta",
+    "images": "./assets/images/Sopravvissuta.png",
+    "color": "red",
+    "trait" : "",
+    "ammo": "?",
+    "expansion": "lockdown"
+  },
+  {
+    "name": "Janitor",
+    "nameITA": "Inserviente",
+    "images": "./assets/images/Inserviente.png",
+    "color": "orange",
+    "trait" : "",
+    "ammo": "■ ■ ■",
+    "expansion": "lockdown"
   }
 ]

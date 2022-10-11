@@ -38,9 +38,14 @@
 }
 
 .incipit {
+    text-transform: uppercase;
     text-align: center;
-    font-size: medium;
+    font-size: x-large;
     margin-bottom: 20px;
+}
+
+.incipit-subtitle {
+    font-size: medium;
 }
 
 .random-section {
@@ -82,6 +87,10 @@
 .manual-section {
     display: flex;
     flex-direction: column;
+}
+
+.player-number-button {
+    width: 80px;
 }
 
 @media screen and (max-width: 599px) {

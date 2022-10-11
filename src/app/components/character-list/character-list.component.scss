@@ -1,7 +1,7 @@
 .characters-container-total{
     width: 100%;
     min-height: 100vh;
-    background-color: #151515;
+    // background-color: #151515;
 }
 
 .characters-container-total-day{
@@ -72,6 +72,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.icon-title {
+    font-size: x-large !important;
+    text-transform: uppercase;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 599px) {
@@ -220,9 +230,10 @@
 .filter-expansions{
     display: flex;
     flex-direction: column;
-    background-color: #252525;
+    background-color: rgb(254, 254, 254);
+    color: black;
     border-radius: 8px;
-    box-shadow: 0 5px 15px #404040, 0 4px 12px #404040;
+    box-shadow: 0 0px 10px #c8f6e3, 0 0px 10px #c8f6e3;
     padding: 10px;
     margin: 16px;
     min-width: 210px
@@ -238,9 +249,9 @@
     min-width: 280px
 }
 
-.filter-expansions:hover{
-    box-shadow: 0 5px 15px #606060, 0 4px 12px #606060;
-}
+// .filter-expansions:hover{
+//     box-shadow: 0 5px 15px #606060, 0 4px 12px #606060;
+// }
 
 .filter-race-day:hover{
     box-shadow: 0 5px 15px #151515, 0 4px 12px #151515;

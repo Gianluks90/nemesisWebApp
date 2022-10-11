@@ -11,6 +11,12 @@
 	url("./assets/font/BoisterBlack/@font-face/85ed127b29ced90900da1071e6b57e94.svg#BoisterBlack") format("svg"); /* iOS 4.1- */
   }
 
+  @font-face {font-family: "BaronNeue";
+	src: url("./assets/font/baronNeue/BaronNeue.woff") format("woff") /* chrome、firefox */
+  }
+
+
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -32,6 +38,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	outline: none;
+	font-family: 'BaronNeue';
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -59,7 +66,8 @@ table {
 html, body {min-height: 100vh; }
 
 body {
-	background-color: #151515;
+	// background-color: #151515;
+	background-color: #181819 ;
 	color: #fff;
 	margin: 0; 
 	padding: 0; 

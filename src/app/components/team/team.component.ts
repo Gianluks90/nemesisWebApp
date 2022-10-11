@@ -36,6 +36,8 @@ export class TeamComponent implements OnInit {
   }
 
   getMoreRandom(arr, n) {
+    console.log('getMoreRandom', arr, n);
+    
     const tempArray = [...arr];
     this.squad = [];
     while (this.squad.length !== n) {
