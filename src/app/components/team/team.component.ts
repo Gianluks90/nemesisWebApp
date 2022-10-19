@@ -35,37 +35,69 @@ export class TeamComponent implements OnInit {
     this.closeEmitted.emit(true);
   }
 
-  getMoreRandom(arr, n) {
-    console.log('getMoreRandom', arr, n);
-    
-    const tempArray = [...arr];
-    this.squad = [];
-    while (this.squad.length !== n) {
-      const index = Math.floor(Math.random() * tempArray.length);
-      const selectedCharacter = tempArray[index];
-      if (this.squad.filter(c => c.color.includes(selectedCharacter.color[0])).length === 0) {
-        this.squad.push(tempArray[index]);
-        tempArray.splice(index, 1);
-      }
-    }
+  getMoreRandom(arr, n) { 
+    console.log('getMoreRandom', arr, n); 
+ 
+    const tempArray = [...arr]; 
+    this.squad = []; 
+    while (this.squad.length !== n) { 
+      const index = Math.floor(Math.random() * tempArray.length); 
+      const selectedCharacter = tempArray[index]; 
+      if (!this.squad.some(e => e.color === selectedCharacter.color)) { 
+        this.squad.push(tempArray[index]); 
+        tempArray.splice(index, 1); 
+      } 
+    } 
+  } 
+ 
+  manualNumberPlayerSelected(arr, n){ 
+    this.manualNumberClicked = true; 
+    const tempArray = [...arr]; 
+    this.squadToChoice = []; 
+    if (this.squad.length === 0) { 
+      this.teamCounter = n; 
+    } 
+      while (this.squadToChoice.length !== 2) { 
+        const index = Math.floor(Math.random() * tempArray.length); 
+        const selectedCharacter = tempArray[index]; 
+        if (!this.squad.some(e => e.color === selectedCharacter.color)) { 
+          this.squadToChoice.push(tempArray[index]); 
+          tempArray.splice(index, 1); 
+        } 
+      } 
   }
 
-  manualNumberPlayerSelected(arr, n){
-    this.manualNumberClicked = true;
-    const tempArray = [...arr];
-    this.squadToChoice = [];
-    if (this.squad.length === 0) {
-      this.teamCounter = n;
-    }
-      while (this.squadToChoice.length !== 2) {
-        const index = Math.floor(Math.random() * tempArray.length);
-        const selectedCharacter = tempArray[index];
-        if (this.squadToChoice.filter(c => c.color.includes(selectedCharacter.color[0])).length === 0) {
-          this.squadToChoice.push(tempArray[index]);
-          tempArray.splice(index, 1);
-        }
-      }
-  }
+  // getMoreRandom(arr, n) {
+  //   console.log('getMoreRandom', arr, n);
+    
+  //   const tempArray = [...arr];
+  //   this.squad = [];
+  //   while (this.squad.length !== n) {
+  //     const index = Math.floor(Math.random() * tempArray.length);
+  //     const selectedCharacter = tempArray[index];
+  //     if (this.squad.filter(c => c.color.includes(selectedCharacter.color[0])).length === 0) {
+  //       this.squad.push(tempArray[index]);
+  //       tempArray.splice(index, 1);
+  //     }
+  //   }
+  // }
+
+  // manualNumberPlayerSelected(arr, n){
+  //   this.manualNumberClicked = true;
+  //   const tempArray = [...arr];
+  //   this.squadToChoice = [];
+  //   if (this.squad.length === 0) {
+  //     this.teamCounter = n;
+  //   }
+  //     while (this.squadToChoice.length !== 2) {
+  //       const index = Math.floor(Math.random() * tempArray.length);
+  //       const selectedCharacter = tempArray[index];
+  //       if (this.squadToChoice.filter(c => c.color.includes(selectedCharacter.color[0])).length === 0) {
+  //         this.squadToChoice.push(tempArray[index]);
+  //         tempArray.splice(index, 1);
+  //       }
+  //     }
+  // }
 
   characterSelected(character: any){
     this.firstCharacterSelected = true;
@@ -81,7 +113,4 @@ export class TeamComponent implements OnInit {
       }
     }    
   }
-
-
-
 }
