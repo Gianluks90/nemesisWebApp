@@ -9,7 +9,10 @@ export class TeamComponent implements OnInit {
 
   @Input()
   set teamInfo(data: any) {
-    this.incipit = data.type === 'random'? "Random players number" : "Manual players number";
+    // this.incipit = data.type === 'random'? "Random players number" : "Manual players number";
+    this.incipit = "Select number of players";
+    this.type = data.type;
+    console.log('datatype', this.type)
     this.random = data.type === 'random'? true : false;
     this.filteredCharacters = data.characters;
   }
@@ -25,6 +28,7 @@ export class TeamComponent implements OnInit {
   public teamCounter: number = 0;
   public manualSquadCompleted: boolean = false;
   public firstCharacterSelected: boolean = false;
+  public type = '';
 
   constructor() { }
 
@@ -35,41 +39,41 @@ export class TeamComponent implements OnInit {
     this.closeEmitted.emit(true);
   }
 
-  getMoreRandom(arr, n) { 
-    console.log('getMoreRandom', arr, n); 
- 
-    const tempArray = [...arr]; 
-    this.squad = []; 
-    while (this.squad.length !== n) { 
-      const index = Math.floor(Math.random() * tempArray.length); 
-      const selectedCharacter = tempArray[index]; 
-      if (!this.squad.some(e => e.color === selectedCharacter.color)) { 
-        this.squad.push(tempArray[index]); 
-        tempArray.splice(index, 1); 
-      } 
-    } 
-  } 
- 
-  manualNumberPlayerSelected(arr, n){ 
-    this.manualNumberClicked = true; 
-    const tempArray = [...arr]; 
-    this.squadToChoice = []; 
-    if (this.squad.length === 0) { 
-      this.teamCounter = n; 
-    } 
-      while (this.squadToChoice.length !== 2) { 
-        const index = Math.floor(Math.random() * tempArray.length); 
-        const selectedCharacter = tempArray[index]; 
-        if (!this.squad.some(e => e.color === selectedCharacter.color)) { 
-          this.squadToChoice.push(tempArray[index]); 
-          tempArray.splice(index, 1); 
-        } 
-      } 
+  getMoreRandom(arr, n) {
+    console.log('getMoreRandom', arr, n);
+
+    const tempArray = [...arr];
+    this.squad = [];
+    while (this.squad.length !== n) {
+      const index = Math.floor(Math.random() * tempArray.length);
+      const selectedCharacter = tempArray[index];
+      if (!this.squad.some(e => e.color === selectedCharacter.color)) {
+        this.squad.push(tempArray[index]);
+        tempArray.splice(index, 1);
+      }
+    }
+  }
+
+  manualNumberPlayerSelected(arr, n){
+    this.manualNumberClicked = true;
+    const tempArray = [...arr];
+    this.squadToChoice = [];
+    if (this.squad.length === 0) {
+      this.teamCounter = n;
+    }
+      while (this.squadToChoice.length !== 2) {
+        const index = Math.floor(Math.random() * tempArray.length);
+        const selectedCharacter = tempArray[index];
+        if (!this.squad.some(e => e.color === selectedCharacter.color)) {
+          this.squadToChoice.push(tempArray[index]);
+          tempArray.splice(index, 1);
+        }
+      }
   }
 
   // getMoreRandom(arr, n) {
   //   console.log('getMoreRandom', arr, n);
-    
+
   //   const tempArray = [...arr];
   //   this.squad = [];
   //   while (this.squad.length !== n) {
@@ -111,6 +115,6 @@ export class TeamComponent implements OnInit {
         this.manualSquadCompleted = true;
         this.firstCharacterSelected = false;
       }
-    }    
+    }
   }
 }

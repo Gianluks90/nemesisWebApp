@@ -80,7 +80,7 @@
                     <div class="list" *ngFor="let character of squad; let i = index">
                         <div class="single-character">
                             <img class="character-image" title="{{character.name}}" src={{character.images}}>
-                            <hr [ngStyle]="{ 'color': character.color, 'width': '100%' }">
+                            <hr class="player-bar" [ngStyle]="{ 'color': character.color, 'width': '100%', 'box-shadow': '1px 1px 40px 5px ' + character.color }">
                             <div>Player {{i + 1}}</div>
                             <div><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
                         </div>
