@@ -1,42 +1,22 @@
 .home-container{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
-// .header-section{
+// .header-section-night{
 //     width: 100%;
-//     height: 45vh;
-//     background-image: url("src/assets/images/desktop-header-day.jpg");
+//     height: 48vh;
+//     background-image: url("src/assets/images/desktop-header-night.jpg");
 //     background-size: cover;
 //     background-repeat: no-repeat;
 //     background-position: center center;
-//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
 // }
 
-.header-section-night{
-    width: 100%;
-    height: 48vh;
-    background-image: url("src/assets/images/desktop-header-night.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    // position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .header-image{
-    height: 55%;
-    // width: 15%;
-    // position: absolute;
-    // right: 0;
-    // bottom: 0;
-    // cursor: pointer;
-    // animation: pulse 1s linear infinite;
-}
-
-.header-image2{
     height: 30%;
 }
 
@@ -65,10 +45,10 @@
 .characters-image:hover{
   transform: scale(1.03);
 }
-@media screen and (min-width: 600px) and (max-width: 1199px){
+@media screen and (min-width: 600px) and (max-width: 1200px){
 
     .header-image{
-        height: 45%;
+        height: 30%;
         // width: 18%;
     }
 
@@ -77,7 +57,7 @@
     }
 
     .characters-image{
-      height: 45%;
+      height: 17%;
     }
 
 }
@@ -93,12 +73,12 @@
     }
 
     .header-image{
-        height: 25%;
+        height: 13%;
         // width: 35%;
     }
 
     .characters-image{
-      height: 18%;
+      height: 7%;
     }
 
     .seven-disclaimer{
@@ -109,9 +89,9 @@
         font-size: xx-small !important;
     }
 
-    .footer-container{
-        height: 8vh;
-    }
+    // .footer-container{
+    //     height: 2vh;
+    // }
 
 }
 
@@ -189,9 +169,9 @@
     align-items: center;
 }
 
-.header-section-night2{
+.header-section-night{
     width: 100%;
-    height: 98vh;
+    height: 100vh;
     background-image: url("src/assets/images/HOME-nemesis_big.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -210,6 +190,7 @@
 
 .seven-disclaimer{
     font-size: small;
+    margin: 0px 0px 4px 0px;
 }
 
 .font-disclaimer{
@@ -223,7 +204,11 @@
 
 .footer-container{
     color: white;
-    height: 2vh;
+    // height: 2vh;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #212121;
 }
 
 .disclaimer-container{
@@ -243,54 +228,3 @@
     bottom: 0;
     height: 90px;
 }
-
-
-// .button-container2{
-//     height: 94vh;
-// }
-
-// .random2{
-//     width: 100vw;
-//     height: 47vh;
-//     background-image: url("src/assets/images/meliodasvszeldris-opacized.png");
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     background-position: center center;
-//     color: black;
-//     text-align: center;
-//     font-size: 50px;
-//     text-shadow: #000 0px 0px 3px,   #000 0px 0px 3px,   #000 0px 0px 3px,
-//                  #000 0px 0px 3px,   #000 0px 0px 3px,   #000 0px 0px 3px;
-//     line-height: 30vh;
-//     cursor: pointer;
-//     font-family: 'BoisterBlack';
-//     color: white;
-// }
-
-// .list2{
-//     width: 100vw;
-//     height: 47vh;
-//     background-image: url("src/assets/images/all-sins-opacized.jpg");
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     background-position: center center;
-//     color: black;
-//     text-align: center;
-//     font-size: 50px;
-//     text-shadow: #000 0px 0px 3px,   #000 0px 0px 3px,   #000 0px 0px 3px,
-//                  #000 0px 0px 3px,   #000 0px 0px 3px,   #000 0px 0px 3px;
-//     line-height: 30vh;
-//     cursor: pointer;
-//     font-family: 'BoisterBlack';
-//     color: white;
-// }
-
-// .footer-container2{
-//     color: white;
-//     height: 6vh;
-// }
-
-// .disclaimer-container2{
-//     text-align: center;
-//     line-height: 2vh;
-// }

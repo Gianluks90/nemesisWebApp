@@ -34,12 +34,12 @@
             </div>
           </div>
 
-        </div>
+          <div class="buttons-type">
+            <img class="random-image" src="./assets/images/random.png" (click)="teamButtonsClicked('random', filteredCharacters)">
+            <img class="random-image" src="./assets/images/classic.png" (click)="teamButtonsClicked('classic', filteredCharacters)">
+            <img class="random-image" src="./assets/images/manual.png" (click)="teamButtonsClicked('manual', filteredCharacters)">
+          </div>
 
-        <div class="buttons-type">
-          <img class="random-image" src="./assets/images/random.png" (click)="teamButtonsClicked('random', filteredCharacters)">
-          <img class="random-image" src="./assets/images/classic.png" (click)="teamButtonsClicked('classic', filteredCharacters)">
-          <img class="random-image" src="./assets/images/manual.png" (click)="teamButtonsClicked('manual', filteredCharacters)">
         </div>
 
         <div *ngIf="(isHandset | async) && !isFilterClosed" class="filter-container">
@@ -56,19 +56,59 @@
                   <input type="checkbox" (click)="filterBy('aftermath', 'expansion')">
                   <span class="expansion-name">Aftermath</span>
                 </label>
+              </div>
+              <div class="row">
                 <label class="container">
                   <input type="checkbox" (click)="filterBy('medic', 'expansion')">
                   <span class="expansion-name">Medic Expansion</span>
+                </label>
+                <label class="container">
+                  <input type="checkbox" (click)="filterBy('lockdown', 'expansion')">
+                  <span class="expansion-name">Lockdown</span>
                 </label>
               </div>
             </div>
           </div>
 
-          <img class="random-image" src="./assets/images/random.png" (click)="teamButtonsClicked('random', filteredCharacters)">
+          <div class="buttons-type">
+            <img class="random-image" src="./assets/images/random.png" (click)="teamButtonsClicked('random', filteredCharacters)">
+            <img class="random-image" src="./assets/images/classic.png" (click)="teamButtonsClicked('classic', filteredCharacters)">
+            <img class="random-image" src="./assets/images/manual.png" (click)="teamButtonsClicked('manual', filteredCharacters)">
+          </div>
 
-          <img class="random-image" src="./assets/images/manual.png" (click)="teamButtonsClicked('manual', filteredCharacters)">
+        </div>
 
-      </div>
+        <!-- <div *ngIf="(isHandset | async) && !isFilterClosed" class="filter-container">
+          <div class="filter-expansions">
+            <div class="single-section-filter">
+              <div class="icon-title">Expansions</div>
+              <div class="row">
+                <label class="container">
+                  <input type="checkbox" (click)="filterBy('base', 'expansion')">
+                  <span class="expansion-name">Base Game</span>
+                </label>
+                <label class="container">
+                  <input type="checkbox" (click)="filterBy('aftermath', 'expansion')">
+                  <span class="expansion-name">Aftermath</span>
+                </label>
+                <label class="container">
+                  <input type="checkbox" (click)="filterBy('medic', 'expansion')">
+                  <span class="expansion-name">Medic Expansion</span>
+                </label>
+                <label class="container">
+                  <input type="checkbox" (click)="filterBy('lockdown', 'expansion')">
+                  <span class="expansion-name">Lockdown</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="buttons-type">
+            <img class="random-image" src="./assets/images/random.png" (click)="teamButtonsClicked('random', filteredCharacters)">
+            <img class="random-image" src="./assets/images/classic.png" (click)="teamButtonsClicked('classic', filteredCharacters)">
+            <img class="random-image" src="./assets/images/manual.png" (click)="teamButtonsClicked('manual', filteredCharacters)">
+          </div>
+        </div> -->
 
     </div>
 

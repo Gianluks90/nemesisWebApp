@@ -15,9 +15,6 @@
 	src: url("./assets/font/baronNeue/BaronNeue.woff") format("woff") /* chrome、firefox */
   }
 
-
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -67,10 +64,17 @@ html, body {min-height: 100vh; }
 
 body {
 	// background-color: #151515;
-	background-color: #181819 ;
+	background-color: #181819;
 	color: #fff;
 	margin: 0; 
 	padding: 0; 
 	font-family: 'Jost', sans-serif;
 	overflow-x: hidden;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
