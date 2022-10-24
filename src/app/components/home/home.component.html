@@ -17,8 +17,8 @@
 </diV> -->
 <diV class="home-container">
 
-    <div class="header-section-night" >
-        <img class="header-image" src="./assets/images/logo-new.png">
+    <div class="header-section-night" [ngClass]="isLockdown ? 'lockdown' : 'standard'">
+        <img class="header-image" src="./assets/images/logo-new.png" (click)="changeVersion()">
         <img class="characters-image" [routerLink]="['/character-list']" src="./assets/images/characters.png">
     </div>
     <div class="footer-container">

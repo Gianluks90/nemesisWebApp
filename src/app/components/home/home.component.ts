@@ -17,19 +17,16 @@ export class HomeComponent implements OnInit {
     map(result => result.matches)
   );
 
-  public now: Date;
-  public isNight: boolean;
-  public isLight: boolean;
-  public twitchLink: any;
+  public isLockdown: boolean = false;
 
-  constructor(private breakpointObserver: BreakpointObserver) { 
-    this.isNight = false;
-    this.isLight = localStorage.getItem('isLight') === 'true' ? true : false;
-  }
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
-    this.now = new Date();
-    this.isNight = this.now.getHours() > 18 ||  this.now.getHours() < 7? true : false;
+
+  }
+
+  public changeVersion() {
+    this.isLockdown = !this.isLockdown;
   }
 
 }

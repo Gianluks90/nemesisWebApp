@@ -130,4 +130,8 @@ export class TeamComponent implements OnInit {
       }
     }
   }
+
+  public stopPropagation(event: any) {
+    event.stopPropagation();
+  }
 }

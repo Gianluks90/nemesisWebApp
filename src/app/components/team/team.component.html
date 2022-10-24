@@ -1,5 +1,5 @@
-<div class="full-container">
-    <div class="dialog-container">
+<div class="full-container" (click)="closeComponent()">
+    <div class="dialog-container" (click)="stopPropagation($event)">
         <div class="header-dialog">
             <button class="close-button" (click)="closeComponent()">✕</button>
         </div>
