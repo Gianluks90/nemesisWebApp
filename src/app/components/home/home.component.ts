@@ -17,16 +17,17 @@ export class HomeComponent implements OnInit {
     map(result => result.matches)
   );
 
-  public isLockdown: boolean = false;
+  public isLockdown = false;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
-
+    this.isLockdown = localStorage.getItem('isLockdown') === 'true' ? true : false;
   }
 
   public changeVersion() {
     this.isLockdown = !this.isLockdown;
+    localStorage.setItem('isLockdown', this.isLockdown.toString());
   }
 
 }

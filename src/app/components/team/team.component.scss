@@ -1,203 +1,243 @@
 .full-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, .7);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dialog-container {
+  height: auto;
+  width: 70vw;
+  background-color: #151515;
+  border-radius: 8px;
+  padding: 16px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-button {
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  font-size: large;
+  float: right;
+}
+
+.player-selection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.incipit {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: x-large;
+  margin-bottom: 20px;
+}
+
+.incipit-subtitle {
+  font-size: medium;
+}
+
+.random-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.characters-container {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.characters-list {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.characters-list-classic {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.list {
+  width: 20%;
+}
+
+.list-classic {
+  width: 33.3%;
+}
+
+.team-section {
+  display: flex;
+  width: 49%;
+  margin: 8px 0px;
+}
+
+.uno {
+  justify-content: flex-end;
+}
+
+.due {
+  justify-content: flex-start;
+}
+
+.single-character {
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+}
+
+.single-character-classic {
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+
+.image-container {
+  position: relative;
+  // max-height: 300px;
+}
+
+.character-image-random {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.character-name{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0px 0px 8px 0px;
+  text-align: center;
+  font-size: 16pt;
+}
+
+.character-image {
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.manual-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-number-button {
+  width: 80px;
+  cursor: pointer;
+  color: #ffffff,
+}
+
+.char-description {
+  font-size: medium;
+}
+
+.character-name-small{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0px 0px 8px 0px;
+  text-align: center;
+  font-size: 16pt;
+}
+
+@media screen and (max-width: 1200px) {
+  .char-description {
+    font-size: x-small;
+  }
+
+  .full-container {
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, .7);
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
+  }
 
-.dialog-container {
-    height: auto;
-    width: 70vw;
-    background-color: #151515;
-    border-radius: 8px;
-    padding: 16px;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-}
+  .character-name{
+    font-size: 11pt;
+  }
 
-.close-button {
-    background-color: transparent;
-    border-style: none;
-    color: white;
-    cursor: pointer;
-    height: 40px;
-    width: 40px;
-    font-size: large;
-    float: right;
-}
+  .character-name-small{
+    font-size: 11pt;
+  }
 
-.player-selection {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.incipit {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: x-large;
-    margin-bottom: 20px;
-}
-
-.incipit-subtitle {
-    font-size: medium;
-}
-
-.random-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.characters-container {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.characters-list {
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-}
-
-.characters-list-classic{
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.list {
-    width: 20%;
-}
-
-.list-classic{
-    width: 33.3%;
-}
-
-.team-section{
-    display: flex;
-    width: 49%;
-    margin: 8px 0px;
-}
-
-.uno{
-    justify-content: flex-end;
-}
-
-.due{
-    justify-content: flex-start;
-}
-
-.single-character {
-    display: flex;
-    flex-direction: column;
-    margin: 12px;
-}
-
-.single-character-classic{
-    display: flex;
-    flex-direction: column;
-    margin: 8px;
-}
-
-.character-image-random{
-    border-radius: 20px;
-}
-
-.character-image{
-    // width: 210px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.manual-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.player-number-button {
-    width: 80px;
-    cursor: pointer;
-    color: #ffffff,
-}
-
-.char-description{
-    font-size: medium;
-}
-
-@media screen and (max-width: 1200px) {
-    .char-description{
-        font-size: x-small;
-    }
-
-    .full-container {
-        height: 100vh;
-        width: 100vw;
-        background-color: rgba(0, 0, 0, .7);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
 }
 
 @media screen and (max-width: 599px) {
-    .list{
-        width: 48%;
-    }
 
-    .dialog-container{
-        width: 80vw;
-    }
+  .character-name{
+    font-size: 10pt;
+  }
 
-    .close-button{
-        font-size: small;
-    }
+  .character-name-small{
+    font-size: 8pt;
+  }
 
-    .incipit{
-        font-size: small;
-    }
+  .dialog-container {
+    width: 80vw;
+  }
 
-    .player-number-button{
-        width: 50px;
-    }
+  .close-button {
+    font-size: small;
+  }
 
-    .list{
-        width: 33%
-    }
+  .incipit {
+    font-size: small;
+  }
 
-    .single-character{
-        font-size: small;
-    }
+  .player-number-button {
+    width: 50px;
+  }
 
-    .character-image{
-        border-radius: 10px;
-    }
+  .list {
+    width: 45%;
+  }
 
-    .team-section{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
+  .single-character {
+    font-size: small;
+  }
 
-    .char-description{
-        font-size: xx-small;
-    }
+  .character-image {
+    border-radius: 10px;
+  }
 
-    .full-container {
-        height: 100vh;
-        width: 100vw;
-        background-color: rgba(0, 0, 0, .7);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+  .team-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .char-description {
+    font-size: xx-small;
+  }
+
+  .full-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }

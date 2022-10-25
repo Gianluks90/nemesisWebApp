@@ -10,33 +10,37 @@
                 <div class="player-number" (click)="getMoreRandom(filteredCharacters, 1)">
                     <img src="./assets/images/Uno.png" class="player-number-button">
                 </div>
-                <div class="player-number" (click)="getMoreRandom(filteredCharacters, 2)">
+                <div *ngIf="filteredCharacters.length > 1" class="player-number" (click)="getMoreRandom(filteredCharacters, 2)">
                     <img src="./assets/images/Due.png" class="player-number-button">
                 </div>
-                <div class="player-number" (click)="getMoreRandom(filteredCharacters, 3)">
+                <div *ngIf="filteredCharacters.length > 1" class="player-number" (click)="getMoreRandom(filteredCharacters, 3)">
                     <img src="./assets/images/Tre.png" class="player-number-button">
                 </div>
-                <div class="player-number" (click)="getMoreRandom(filteredCharacters, 4)">
+                <div *ngIf="filteredCharacters.length > 1" class="player-number" (click)="getMoreRandom(filteredCharacters, 4)">
                     <img src="./assets/images/Quattro.png" class="player-number-button">
                 </div>
-                <div class="player-number" (click)="getMoreRandom(filteredCharacters, 5)">
+                <div *ngIf="filteredCharacters.length > 1" class="player-number" (click)="getMoreRandom(filteredCharacters, 5)">
                     <img src="./assets/images/Cinque.png" class="player-number-button">
                 </div>
             </div>
 
             <div class="characters-container">
-                <div class="characters-list">
-                    <div class="list" *ngFor="let character of squad; let i = index">
-                        <div class="single-character">
-                            <img class="character-image-random" title="{{character.name}}" src={{character.images}}>
-                            <div [ngStyle]="{'box-shadow': '1px 1px 40px 5px ' + character.color, 'width': '100%', 'margin': '8px 0px'}">
-                                <hr [ngStyle]="{ 'color': character.color, 'opacity': '.4', 'width': '100%', 'margin': '0px'}">
-                            </div>
-                            <div class="char-description">Player {{i + 1}}</div>
-                            <div class="char-description"><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
-                        </div>
+              <div class="characters-list">
+                <div class="list" *ngFor="let character of squad; let i = index">
+                  <div class="single-character">
+                    <div class="image-container">
+                      <img class="character-image-random" title="{{character.name}}" src={{character.images}}>
+                      <div class="character-name" [ngStyle]="{'text-shadow': '0px 5px 20px ' + character.color, 'z-index': '1'}">
+                        {{character.name}}</div>
                     </div>
+                      <div [ngStyle]="{'box-shadow': '1px 1px 40px 5px ' + character.color, 'width': '100%', 'margin': '8px 0px'}">
+                      <hr [ngStyle]="{ 'color': character.color, 'opacity': '.4', 'width': '100%', 'margin': '0px'}">
+                    </div>
+                    <div class="char-description">Player {{i + 1}}</div>
+                    <div class="char-description"><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
+                  </div>
                 </div>
+              </div>
             </div>
         </div>
 
@@ -45,16 +49,16 @@
                 <div class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 1)">
                     <img src="./assets/images/Uno.png" class="player-number-button">
                 </div>
-                <div class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 2)">
+                <div *ngIf="filteredCharacters.length > 1" class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 2)">
                     <img src="./assets/images/Due.png" class="player-number-button">
                 </div>
-                <div class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 3)">
+                <div *ngIf="filteredCharacters.length > 1" class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 3)">
                     <img src="./assets/images/Tre.png" class="player-number-button">
                 </div>
-                <div class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 4)">
+                <div *ngIf="filteredCharacters.length > 1" class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 4)">
                     <img src="./assets/images/Quattro.png" class="player-number-button">
                 </div>
-                <div class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 5)">
+                <div *ngIf="filteredCharacters.length > 1" class="player-number" (click)="manualNumberPlayerSelected(filteredCharacters, 5)">
                     <img src="./assets/images/Cinque.png" class="player-number-button">
                 </div>
             </div>
@@ -64,12 +68,16 @@
                 <div class="characters-list">
                     <div class="list" *ngFor="let character of squadToChoice">
                         <div class="single-character">
+                          <div class="image-container">
                             <img class="character-image" title="{{character.name}}" src={{character.images}} (click)="characterSelected(character)">
-                            <div [ngStyle]="{'box-shadow': '1px 1px 40px 5px ' + character.color, 'width': '100%', 'margin': '8px 0px'}">
-                                <hr [ngStyle]="{ 'color': character.color, 'opacity': '.4', 'width': '100%', 'margin': '0px'}">
-                            </div>
-                            <div class="char-description">from: {{character.expansion}}</div>
-                            <div class="char-description"><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
+                            <div class="character-name" [ngStyle]="{'text-shadow': '0px 5px 20px ' + character.color, 'z-index': '1'}">
+                              {{character.name}}</div>
+                          </div>
+                          <div [ngStyle]="{'box-shadow': '1px 1px 40px 5px ' + character.color, 'width': '100%', 'margin': '8px 0px'}">
+                              <hr [ngStyle]="{ 'color': character.color, 'opacity': '.4', 'width': '100%', 'margin': '0px'}">
+                          </div>
+                          <div class="char-description">from: {{character.expansion}}</div>
+                          <div class="char-description"><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
                         </div>
                     </div>
                 </div>
@@ -79,12 +87,16 @@
                 <div class="characters-list">
                     <div class="list" *ngFor="let character of squad; let i = index">
                         <div class="single-character">
+                          <div class="image-container">
                             <img class="character-image-random" title="{{character.name}}" src={{character.images}}>
-                            <div [ngStyle]="{'box-shadow': '1px 1px 40px 5px ' + character.color, 'width': '100%', 'margin': '8px 0px'}">
-                                <hr [ngStyle]="{ 'color': character.color, 'opacity': '.4', 'width': '100%', 'margin': '0px'}">
-                            </div>
-                            <div class="char-description">from: {{character.expansion}}</div>
-                            <div class="char-description"><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
+                            <div class="character-name" [ngStyle]="{'text-shadow': '0px 5px 20px ' + character.color, 'z-index': '1'}">
+                              {{character.name}}</div>
+                          </div>
+                          <div [ngStyle]="{'box-shadow': '1px 1px 40px 5px ' + character.color, 'width': '100%', 'margin': '8px 0px'}">
+                              <hr [ngStyle]="{ 'color': character.color, 'opacity': '.4', 'width': '100%', 'margin': '0px'}">
+                          </div>
+                          <div class="char-description">from: {{character.expansion}}</div>
+                          <div class="char-description"><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
                         </div>
                     </div>
                 </div>
@@ -96,16 +108,16 @@
                 <div class="player-number" (click)="classicMode(filteredCharacters, 1)">
                     <img src="./assets/images/Uno.png" class="player-number-button">
                 </div>
-                <div class="player-number" (click)="classicMode(filteredCharacters, 2)">
+                <div *ngIf="filteredCharacters.length > 1" class="player-number" (click)="classicMode(filteredCharacters, 2)">
                     <img src="./assets/images/Due.png" class="player-number-button">
                 </div>
-                <div class="player-number" (click)="classicMode(filteredCharacters, 3)">
+                <div *ngIf="filteredCharacters.length > 1" class="player-number" (click)="classicMode(filteredCharacters, 3)">
                     <img src="./assets/images/Tre.png" class="player-number-button">
                 </div>
-                <div class="player-number" (click)="classicMode(filteredCharacters, 4)">
+                <div *ngIf="filteredCharacters.length > 1" class="player-number" (click)="classicMode(filteredCharacters, 4)">
                     <img src="./assets/images/Quattro.png" class="player-number-button">
                 </div>
-                <div class="player-number" (click)="classicMode(filteredCharacters, 5)">
+                <div *ngIf="filteredCharacters.length > 1" class="player-number" (click)="classicMode(filteredCharacters, 5)">
                     <img src="./assets/images/Cinque.png" class="player-number-button">
                 </div>
             </div>
@@ -116,24 +128,32 @@
                     <div class="team-section uno" [ngStyle]="{ 'border': '1px solid ' + choosedColor[0], 'border-radius': '10px', 'box-shadow': '1px 1px 5px 2px ' + choosedColor[0]}">
                         <div class="list-classic" *ngFor="let character of classicTeam1">
                             <div class="single-character-classic">
+                              <div class="image-container">
                                 <img class="character-image" title="{{character.name}}" src={{character.images}} (click)="characterSelectedClassic(character)">
-                                <div [ngStyle]="{'box-shadow': '1px 1px 40px 5px ' + character.color, 'width': '100%', 'margin': '8px 0px'}">
-                                    <hr [ngStyle]="{ 'color': character.color, 'opacity': '.4', 'width': '100%', 'margin': '0px'}">
-                                </div>
-                                <div class="char-description">from: {{character.expansion}}</div>
-                                <div class="char-description"><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
+                                <div [ngClass]="character.name === 'Psychologist' ? 'character-name-small' : 'character-name'" [ngStyle]="{'text-shadow': '0px 5px 20px ' + character.color, 'z-index': '1'}">
+                                  {{character.name}}</div>
+                              </div>
+                              <div [ngStyle]="{'box-shadow': '1px 1px 40px 5px ' + character.color, 'width': '100%', 'margin': '8px 0px'}">
+                                  <hr [ngStyle]="{ 'color': character.color, 'opacity': '.4', 'width': '100%', 'margin': '0px'}">
+                              </div>
+                              <div class="char-description">from: {{character.expansion}}</div>
+                              <div class="char-description"><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
                             </div>
                         </div>
                     </div>
                     <div class="team-section due" [ngStyle]="{ 'border': '1px solid ' + choosedColor[1], 'border-radius': '10px', 'box-shadow': '1px 1px 5px 2px ' + choosedColor[1]}">
                         <div class="list-classic" *ngFor="let character of classicTeam2">
                             <div class="single-character-classic">
+                              <div class="image-container">
                                 <img class="character-image" title="{{character.name}}" src={{character.images}} (click)="characterSelectedClassic(character)">
-                                <div [ngStyle]="{'box-shadow': '1px 1px 40px 5px ' + character.color, 'width': '100%', 'margin': '8px 0px'}">
-                                    <hr [ngStyle]="{ 'color': character.color, 'opacity': '.4', 'width': '100%', 'margin': '0px'}">
-                                </div>
-                                <div class="char-description">from: {{character.expansion}}</div>
-                                <div class="char-description"><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
+                                <div [ngClass]="character.name === 'Psychologist' ? 'character-name-small' : 'character-name'" [ngStyle]="{'text-shadow': '0px 5px 20px ' + character.color, 'z-index': '1'}">
+                                  {{character.name}}</div>
+                              </div>
+                              <div [ngStyle]="{'box-shadow': '1px 1px 40px 5px ' + character.color, 'width': '100%', 'margin': '8px 0px'}">
+                                  <hr [ngStyle]="{ 'color': character.color, 'opacity': '.4', 'width': '100%', 'margin': '0px'}">
+                              </div>
+                              <div class="char-description">from: {{character.expansion}}</div>
+                              <div class="char-description"><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
                             </div>
                         </div>
                     </div>
@@ -144,12 +164,16 @@
                 <div class="characters-list">
                     <div class="list" *ngFor="let character of squad; let i = index">
                         <div class="single-character">
+                          <div class="image-container">
                             <img class="character-image-random" title="{{character.name}}" src={{character.images}}>
-                            <div [ngStyle]="{'box-shadow': '1px 1px 40px 5px ' + character.color, 'width': '100%', 'margin': '8px 0px'}">
-                                <hr [ngStyle]="{ 'color': character.color, 'opacity': '.4', 'width': '100%', 'margin': '0px'}">
-                            </div>
-                            <div class="char-description">from: {{character.expansion}}</div>
-                            <div class="char-description"><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
+                            <div class="character-name" [ngStyle]="{'text-shadow': '0px 5px 20px ' + character.color, 'z-index': '1'}">
+                              {{character.name}}</div>
+                          </div>
+                        <div [ngStyle]="{'box-shadow': '1px 1px 40px 5px ' + character.color, 'width': '100%', 'margin': '8px 0px'}">
+                              <hr [ngStyle]="{ 'color': character.color, 'opacity': '.4', 'width': '100%', 'margin': '0px'}">
+                          </div>
+                          <div class="char-description">from: {{character.expansion}}</div>
+                          <div class="char-description"><span>Ammo:</span> <span style="color: red;"> {{character.ammo}}</span></div>
                         </div>
                     </div>
                 </div>

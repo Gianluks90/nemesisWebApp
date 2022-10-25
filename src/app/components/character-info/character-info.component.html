@@ -1,0 +1,30 @@
+<div class="full-container" (click)="closeComponent()">
+  <div class="dialog-container" (click)="stopPropagation($event)">
+    <div class="header-dialog">
+      <button class="close-button" (click)="closeComponent()">✕</button>
+    </div>
+    <div class="single-character">
+      <div class="image-container">
+        <img class="character-image" title="{{character.name}}" src={{character.images}}>
+        <div class="character-title" [ngStyle]="{'text-shadow': '0px 5px 20px ' + character.color, 'z-index': '1'}">
+          {{character.name}}
+        </div>
+      </div>
+      <div class="character-details">
+        <div class="character-name">
+          <span>Trait Name: </span>
+          {{character.traitName}}
+        </div>
+        <div class="divider"></div>
+        <div class="character-name">{{character.traitDescription}}</div>
+        <br>
+        <div class="character-name">
+          <span>Ammo: </span>
+          <span style="color: red">{{character.ammo}}</span>
+        </div>
+        <div class="character-name">
+          <span>From: </span>{{character.expansion}}</div>
+      </div>
+  </div>
+  </div>
+</div>

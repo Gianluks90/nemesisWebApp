@@ -1,29 +1,14 @@
-<!-- <diV class="home-container">
-
-    <div class="header-section-night" >
-        <img class="header-image" src="./assets/images/logo-new.png">
-    </div>
-    <div class="list"  [routerLink]="['/character-list']">
-      <img class="characters-image" src="./assets/images/characters.png">
-  </div>
-    <div class="footer-container">
-        <div class="disclaimer-container">
-            <p class="seven-disclaimer">
-                Disclaimer: We are NOT affiliated with this game, this is a fan site dedicated to the game. Randomizer is not affiliated with or endorsed by Awaken Realms/Cranio Creations.
-            </p>
-        </div>
-    </div>
-
-</diV> -->
 <diV class="home-container">
 
     <div class="header-section-night" [ngClass]="isLockdown ? 'lockdown' : 'standard'">
-        <img class="header-image" src="./assets/images/logo-new.png" (click)="changeVersion()">
-        <img class="characters-image" [routerLink]="['/character-list']" src="./assets/images/characters.png">
+        <img class="header-image" *ngIf="!isLockdown" src="./assets/images/title-definitive.png" (click)="changeVersion()">
+        <img class="header-image" *ngIf="isLockdown" src="./assets/images/title-lockdown-definitive-red.png" (click)="changeVersion()">
+        <img class="characters-image" *ngIf="!isLockdown" [routerLink]="['/character-list']" src="./assets/images/title-play.png">
+        <img class="characters-image" *ngIf="isLockdown" [routerLink]="['/character-list']" src="./assets/images/title-play-red.png">
     </div>
     <div class="footer-container">
         <div class="disclaimer-container">
-            <div class="seven-disclaimer">
+            <div class="nemesis-disclaimer">
                 Disclaimer: We are NOT affiliated with this game, this is a fan site dedicated to the game. Randomizer is not affiliated with or endorsed by Awaken Realms/Cranio Creations.
             </div>
         </div>

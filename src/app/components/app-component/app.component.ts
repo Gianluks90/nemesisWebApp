@@ -9,12 +9,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit{
 
-  title = 'Randomizer';
-
-  constructor(public router: Router) { 
-    // localStorage.clear();
+  constructor(public router: Router) {
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

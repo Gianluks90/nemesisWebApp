@@ -18,34 +18,27 @@ export class CharacterListComponent implements OnInit {
   );
 
   public characters: any;
-  public isCharacterSelected: any;
+  public characterSelected: any;
   public filteredCharacters: any[];
-  public filterGrade: any[];
-  public filterRace: any[];
-  public filterAttribute: any[];
   public filters: any;
   public searchString: string;
   public isCompact: boolean;
-  // public isLight: boolean;
   public isFilterClosed: boolean;
   public editClicked: boolean;
   public squad: any[];
   public isTeamVisible: boolean;
   public teamData: any;
+  public isCharacterClicked: boolean;
 
   constructor(private characterservice: CharacterService, private breakpointObserver: BreakpointObserver) {
     this.filteredCharacters = [];
-    this.filterGrade = [];
-    this.filterRace = [];
-    this.filterAttribute = [];
     this.filters = {};
     this.searchString = '';
-    this.isCompact = localStorage.getItem('isCompact') === 'true'? true : false;
-    // this.isLight = localStorage.getItem('isLight') === 'true'? true : false;
     this.isFilterClosed = false;
     this.editClicked = false;
     this.isTeamVisible = false;
     this.teamData = {};
+    this.isCharacterClicked = false;
    }
 
   ngOnInit(): void {
@@ -56,7 +49,7 @@ export class CharacterListComponent implements OnInit {
     this.characterservice.getCharacter().subscribe(c => {
       this.characters = c;
       this.filteredCharacters = c;
-    })
+    });
   }
 
   openCloseFilter(){
@@ -70,7 +63,7 @@ export class CharacterListComponent implements OnInit {
     if (this.filters[type].includes(value)){
       this.filters[type].splice(this.filters[type].indexOf(value), 1);
     } else {
-      this.filters[type].push(value)
+      this.filters[type].push(value);
     }
     this.filterCharacters();
   }
@@ -98,21 +91,20 @@ export class CharacterListComponent implements OnInit {
         tempArray.splice(index, 1);
       }
     }
-    console.log('this.squad', this.squad)
-  }
-
-  toTopPage(){
-    window.scrollTo(0,0);
-  }
-
-  characterClicked(character: any){
-    console.log('character clicked', character)
+    console.log('this.squad', this.squad);
   }
 
   teamButtonsClicked(teamType: string, characters: any) {
-    this.isTeamVisible = true;
-    this.teamData.type = teamType;
-    this.teamData.characters = characters;
+    if (this.filteredCharacters.length > 1 || teamType === 'random') {
+      this.isTeamVisible = true;
+      this.teamData.type = teamType;
+      this.teamData.characters = characters;
+    }
+  }
+
+  characterClicked(character: any){
+    this.isCharacterClicked = true;
+    this.characterSelected = character;
   }
 
 }
