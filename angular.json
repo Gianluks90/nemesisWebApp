@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Randomizer": {
+    "Nemesis": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Randomizer",
+            "outputPath": "dist/Nemesis",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Randomizer:build"
+            "browserTarget": "Nemesis:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Randomizer:build:production"
+              "browserTarget": "Nemesis:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Randomizer:build"
+            "browserTarget": "Nemesis:build"
           }
         },
         "test": {
@@ -119,15 +119,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Randomizer:serve"
+            "devServerTarget": "Nemesis:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Randomizer:serve:production"
+              "devServerTarget": "Nemesis:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "Randomizer"
+  "defaultProject": "Nemesis"
 }

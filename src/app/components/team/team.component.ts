@@ -11,6 +11,10 @@ export class TeamComponent implements OnInit {
     this.incipit = 'Select number of players';
     this.type = data.type;
     this.filteredCharacters = data.characters;
+    const expansions = [];
+    this.filteredCharacters.forEach(c => expansions.push(c.expansion));
+    const setExpansions = [...new Set(expansions)];
+    this.onlyAfterMath = (expansions.length === 5 && setExpansions.length === 1 && setExpansions[0] === 'aftermath')? true : false
     console.log('filtered', this.filteredCharacters);
   }
 
@@ -30,6 +34,7 @@ export class TeamComponent implements OnInit {
   public classicTeam1 = [];
   public classicTeam2 = [];
   public height: any;
+  public onlyAfterMath = false;
 
   constructor() {}
 
@@ -92,32 +97,37 @@ export class TeamComponent implements OnInit {
   }
 
   classicMode(arr, n) {
-    this.manualNumberClicked = true;
-    const tempArray = [...arr];
-    const tempColorArray = [];
-    tempArray.forEach((char) => tempColorArray.push(char.color));
-    this.colorArray = [...new Set(tempColorArray)];
-    if (this.squad.length === 0) {
-      this.teamCounter = n;
+    if (this.onlyAfterMath) {
+      this.getMoreRandom(arr, n);
+    } else {
+      this.manualNumberClicked = true;
+      const tempArray = [...arr];
+      const tempColorArray = [];
+      tempArray.forEach((char) => tempColorArray.push(char.color));
+      this.colorArray = [...new Set(tempColorArray)];
+      if (this.squad.length === 0) {
+        this.teamCounter = n;
+      }
+      this.choosedColor = [];
+      this.classicTeam1 = [];
+      this.classicTeam2 = [];
+      while (this.choosedColor.length !== 2) {
+        const index = Math.floor(Math.random() * this.colorArray.length);
+        const selectedColor = this.colorArray[index];
+        if (!this.choosedColor.some((color) => color === selectedColor)) {
+          this.choosedColor.push(this.colorArray[index]);
+        }
+      }
+      tempArray.forEach((char) => {
+        if (char.color === this.choosedColor[0]) {
+          this.classicTeam1.push(char);
+        }
+        if (char.color === this.choosedColor[1]) {
+          this.classicTeam2.push(char);
+        }
+      });
     }
-    this.choosedColor = [];
-    this.classicTeam1 = [];
-    this.classicTeam2 = [];
-    while (this.choosedColor.length !== 2) {
-      const index = Math.floor(Math.random() * this.colorArray.length);
-      const selectedColor = this.colorArray[index];
-      if (!this.choosedColor.some((color) => color === selectedColor)) {
-        this.choosedColor.push(this.colorArray[index]);
-      }
-    }
-    tempArray.forEach((char) => {
-      if (char.color === this.choosedColor[0]) {
-        this.classicTeam1.push(char);
-      }
-      if (char.color === this.choosedColor[1]) {
-        this.classicTeam2.push(char);
-      }
-    });
+
   }
 
   characterSelectedClassic(character: any) {

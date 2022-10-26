@@ -66,8 +66,8 @@ body {
 	// background-color: #151515;
 	background-color: #181819;
 	color: #fff;
-	margin: 0; 
-	padding: 0; 
+	margin: 0;
+	padding: 0;
 	font-family: 'Jost', sans-serif;
 	overflow-x: hidden;
 
@@ -79,35 +79,35 @@ body {
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
-//Chrome 
-::-webkit-scrollbar, 
-::-webkit-scrollbar-thumb, 
-::-webkit-scrollbar-track { 
-    width: 8px; 
-    border: none; 
-    background: transparent; 
-} 
- 
-::-webkit-scrollbar-button, 
-::-webkit-scrollbar-track-piece, 
-::-webkit-scrollbar-corner, 
-::-webkit-resizer { 
-    display: none; 
-} 
- 
-::-webkit-scrollbar-thumb { 
-    border-radius: 6px; 
-    background-color: #414141; 
-} 
- 
-::-webkit-scrollbar-track { 
-    background-image: url("https://i.imgur.com/GvV1R30.png"); 
-    background-repeat: repeat-y; 
-    background-size: contain; 
-} 
- 
-//Firefox 
-* { 
-  scrollbar-color: #414141 transparent; 
-  scrollbar-width: thin; 
+//Chrome
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
+    width: 8px;
+    border: none;
+    background: transparent;
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner,
+::-webkit-resizer {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: #414141;
+}
+
+::-webkit-scrollbar-track {
+    background-image: url("https://i.imgur.com/GvV1R30.png");
+    background-repeat: repeat-y;
+    background-size: contain;
+}
+
+//Firefox
+* {
+  scrollbar-color: #414141 transparent;
+  scrollbar-width: thin;
 }

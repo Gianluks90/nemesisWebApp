@@ -5,12 +5,13 @@
     </div>
     <div class="single-character">
       <div class="image-container">
-        <img class="character-image" title="{{character.name}}" src={{character.images}}>
         <div class="character-title" [ngStyle]="{'text-shadow': '0px 5px 20px ' + character.color, 'z-index': '1'}">
           {{character.name}}
         </div>
+        <img class="character-image" title="{{character.name}}" src={{character.bannerImage}}>
       </div>
       <div class="character-details">
+
         <div class="character-name">
           <span>Trait Name: </span>
           {{character.traitName}}

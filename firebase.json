@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/Nemesis",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
