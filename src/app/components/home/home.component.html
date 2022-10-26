@@ -2,7 +2,7 @@
 
     <div class="header-section-night" [ngClass]="isLockdown ? 'lockdown' : 'standard'">
         <img class="header-image" *ngIf="!isLockdown" src="./assets/images/title-definitive.png" (click)="changeVersion()">
-        <img class="header-image" *ngIf="isLockdown" src="./assets/images/title-lockdown-definitive-red.png" (click)="changeVersion()">
+        <img class="header-image-lockdown" *ngIf="isLockdown" src="./assets/images/title-lockdown-definitive-red.png" (click)="changeVersion()">
         <img class="characters-image" *ngIf="!isLockdown" [routerLink]="['/character-list']" src="./assets/images/title-play.png">
         <img class="characters-image" *ngIf="isLockdown" [routerLink]="['/character-list']" src="./assets/images/title-play-red.png">
     </div>

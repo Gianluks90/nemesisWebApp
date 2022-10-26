@@ -32,7 +32,11 @@
 @media screen and (max-width: 599px) {
 
     .header-image{
-        height: 13%;
+        height: 10%;
+    }
+
+    .header-image-lockdown{
+      height: 13%;
     }
 
     .characters-image{
@@ -58,12 +62,12 @@
 }
 
 .standard{
-    background-image: url("src/assets/images/HOME-nemesis_big.png");
+    background-image: url("~/src/assets/images/HOME-nemesis_big.png");
     animation: fadeIn 5s;
   }
 
   .lockdown{
-    background-image: url("src/assets/images/HOME-lockdown_big.png");
+    background-image: url("~/src/assets/images/HOME-lockdown_big.png");
     animation: fadeOut 5s;
   }
 

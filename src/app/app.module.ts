@@ -5,7 +5,6 @@ import { AppComponent } from './components/app-component/app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CharacterListComponent } from './components/character-list/character-list.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TeamComponent } from './components/team/team.component';
 import { CharacterInfoComponent } from './components/character-info/character-info.component';
 
@@ -21,9 +20,7 @@ import { CharacterInfoComponent } from './components/character-info/character-in
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
