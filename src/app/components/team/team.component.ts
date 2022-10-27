@@ -97,7 +97,7 @@ export class TeamComponent implements OnInit {
   }
 
   classicMode(arr, n) {
-    if (this.onlyAfterMath) {
+    if (this.onlyAfterMath && n === 5) {
       this.getMoreRandom(arr, n);
     } else {
       this.manualNumberClicked = true;
